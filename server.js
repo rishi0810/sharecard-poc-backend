@@ -28,7 +28,6 @@ app.get("/", (req, res) => {
     html = html.replace(/\$\{score\}/g, score || "Default score");
     html = html.replace(/\$\{pos\}/g, pos || "Default pos");
     
-    // Set aggressive caching headers for Vercel
     res.setHeader(
       "Cache-Control",
       "public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=86400, immutable"
